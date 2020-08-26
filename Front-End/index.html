@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data-Analyser</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+        integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="hero">
+        <div class="navbar">
+            <img src="images/logo1.png" class="logo">
+        </div>
+        <div class="content">
+            <small>Welcome to our</small>
+            <h1>Data-Analyser</h1>
+            <button type="button" id="trigger">UPLOAD</button>
+            <small class="tag"><br>Upload your csv file here!</small>
+        </div>
+        <div class="modal__wrapper">
+            <div class="modal__container">
+                <button class="back">&times;</button>
+                <img src="images/bar-chart.png" class="bar-logo">
+                <p>Data is analysed!</p>
+                <button class="btn__red">Download</button>
+            </div>
+        </div>
+        <div class="container">
+            <input type="checkbox" id="check">
+            <label for="check" class="open"><i class="fas fa-bars"></i></label>
+            <div class="sidebar-wrapper">
+                <label for="check" class="close"><i class="fas fa-times"></i></label>
+                <div class="avatar1">
+                    <img class="avatar" src="./images/avatar1.jpg" alt="avatar">
+                    <h2 class="userName">Md Sahil Kaif</h2>
+                    <small>Front-end devloper</small>
+                    <div class="social">
+                        <img src="images/linkedin.png">
+                        <img src="images/github.png">
+                    </div>
+                </div>
+                <div class="avatar2">
+                    <img class="avatar" src="./images/avatar2.jpg" alt="avatar">
+                    <h2 class="userName">Tushar Srivastav</h2>
+                    <small>Back-end devloper</small>
+                    <div class="social">
+                        <img src="images/linkedin.png">
+                        <img src="images/github.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bubbles">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>

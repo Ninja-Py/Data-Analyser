@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.logo{
+      width: 100px;
+      cursor: pointer;
+}
+.navbar{
+    width: 85%;
+    height: 15%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+button{
+    color: #fbfcfd;
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+.content{
+    color: #fbfcfd;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+h1{
+    font-size: 80px;
+    margin: 10px 0 30px;
+    line-height: 80px;
+}
+.sidebar-wrapper {
+    max-width: 300px;
+    min-width: 300px;
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(#00545d, #000729);
+    box-shadow:  0 0 8px #00545d;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    transition: 0.5s ease;
+    
+}
+.sidebar-wrapper .avatar1{
+    position: relative;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-wrapper .avatar2{
+    position: relative;
+    bottom: -14%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-wrapper .avatar {
+    width: 40%;
+    clip-path: circle();
+    box-shadow: 0 0 8px #000;
+}
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+.open {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    color: #007bff;
+    font-size: 1.5rem;
+}
+#check {
+    display: none;
+}
+#check:checked ~ .sidebar-wrapper {
+    right: 0;
+}
+div small{
+    font-size: 20px;
+}
+div h2{
+    font-size: 30px;
+}
+.tag{
+    font-size: 15px;
+    line-height: 35px;
+}
+.social img{
+    width: 25px;
+    margin: 5px auto;
+    cursor: pointer;
+}
+
+
+.bubbles img{
+    width: 50px;
+    animation: bubble 7s linear infinite;
+}
+.bubbles{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -70px;
+}
+@keyframes bubble{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+.bubbles img:nth-child(1){
+    animation-delay: 2s;
+    width: 25px;
+}
+.bubbles img:nth-child(2){
+    animation-delay: 1s;
+}
+.bubbles img:nth-child(3){
+    animation-delay: 3s;
+    width: 25px;
+}
+.bubbles img:nth-child(4){
+    animation-delay: 4.5s;
+}
+.bubbles img:nth-child(5){
+    animation-delay: 3s;
+}
+.bubbles img:nth-child(6){
+    animation-delay: 6s;
+    width: 20px;
+}
+.bubbles img:nth-child(7){
+    animation-delay: 7s;
+    width: 35px;
+}
+.modal__wrapper{
+    position: fixed;
+    left:0;
+    top:0;
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+}
+.modal__container {
+    background: #fff;
+    width: 600px;
+    height: 400px;
+    max-width: 90%;
+    padding: 20px;
+    border-radius: 4px;
+    position: relative;
+    transform: translateY(-100%);
+    transition: all .3s ease-in-out;
+}
+.btn__red{
+    color: #E51515;
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid #E51515;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+}
+.bar-logo{
+    width: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+p {
+    text-align: center;
+    color: cornflowerblue;
+    font-weight: bolder;
+}
+
+
+.modal__container button.back {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 32px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #000;
+}
+.modal__container button.close:hover {
+    color: #6B46C1;
+}
+.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal__wrapper.active .modal__container{
+    transform: translateY(0px);
+}
